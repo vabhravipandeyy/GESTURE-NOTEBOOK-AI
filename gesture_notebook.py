@@ -24,7 +24,7 @@ cap = cv2.VideoCapture(0)
 canvas = None
 prev_x, prev_y = 0, 0
 
-draw_color = (255, 255, 255)   # white pen
+draw_color = (0, 0, 255)   # RED pen
 erase_color = (0, 0, 0)         # erase background
 
 # =============================
