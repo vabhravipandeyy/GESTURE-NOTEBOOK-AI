@@ -169,7 +169,7 @@ Contributions are welcome!
 
 ## 👨‍💻 Author
 
-** VABHRAVI PANDEY**
+**VABHRAVI PANDEY**
  — DIT University, Dehradun
 
 ---
