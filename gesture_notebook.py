@@ -4,9 +4,9 @@ import numpy as np
 import tkinter as tk
 from PIL import Image, ImageTk
 
-# =============================
+
 # MEDIAPIPE HAND SETUP
-# =============================
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
     max_num_hands=1,
@@ -16,9 +16,7 @@ hands = mp_hands.Hands(
 
 mp_draw = mp.solutions.drawing_utils
 
-# =============================
 # CAMERA
-# =============================
 cap = cv2.VideoCapture(0)
 
 canvas = None
@@ -27,9 +25,7 @@ prev_x, prev_y = 0, 0
 draw_color = (0, 0, 255)   # RED pen
 erase_color = (0, 0, 0)         # erase background
 
-# =============================
 # TKINTER WINDOW
-# =============================
 root = tk.Tk()
 root.title("Gesture Notebook AI")
 
@@ -42,9 +38,7 @@ notebook_label.pack(side="left")
 webcam_label = tk.Label(frame)
 webcam_label.pack(side="right")
 
-# =============================
 # FINGER DETECTION
-# =============================
 def fingers_up(hand):
 
     tips = [8, 12, 16, 20]
@@ -58,10 +52,7 @@ def fingers_up(hand):
 
     return fingers
 
-
-# =============================
 # MAIN LOOP
-# =============================
 def update():
 
     global canvas, prev_x, prev_y
@@ -95,7 +86,7 @@ def update():
             x = int(hand.landmark[8].x * w)
             y = int(hand.landmark[8].y * h)
 
-            # ================= DRAW MODE =================
+            #  DRAW MODE
             if index_up and not fist:
 
                 # pen cursor
@@ -114,7 +105,7 @@ def update():
 
                 prev_x, prev_y = x, y
 
-            # ================= ERASER MODE =================
+            # ERASER MODE 
             elif fist:
 
                 # erase canvas
@@ -140,7 +131,7 @@ def update():
             else:
                 prev_x, prev_y = 0, 0
 
-    # ================= DISPLAY =================
+    # DISPLAY 
     notebook_view = canvas.copy()
 
     notebook_rgb = cv2.cvtColor(
