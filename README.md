@@ -167,16 +167,10 @@ Contributions are welcome!
 
 ---
 
-## 📜 License
-
-MIT License — Free to use and modify.
-
----
-
 ## 👨‍💻 Author
 
-**Your Name**
-B.Tech Student — DIT University, Dehradun
+** VABHRAVI PANDEY**
+ — DIT University, Dehradun
 
 ---
 
